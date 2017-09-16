@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<script src="jquery-3.2.1.min.js"></script>
+</head>
+<header>
+  <div class="header-bar">
+    <h1 class="title">
+     Title
+    </h1>
+  </div>
+ </header>
+<body>
+  <div class="menubar">
+    <ul class="menubuttons">
+      <li><a href src=#>Home</a>
+      </li>
+      <li><a href src=#>About</a>
+      </li>
+      <li><a href src=#>Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  
+<div id="slide_show_container">
+  
+  <div class="slide_show_page">
+    <img src="https://placeimg.com/1000/1000/animals/sepia" class="main_image">
+    </img>
+  </div>
+  
+  <div class="slide_show_page">
+    <img src="https://placeimg.com/999/999/animals/sepia" class="main_image">
+    </img>
+  </div>
+
+  <div class="slide_show_page">
+    <img src="https://placeimg.com/998/998/animals/sepia" class="main_image">
+    </img>
+  </div>
+  
+</div>
+
+<script>
+$("#slide_show_container > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slide_show_container > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slide_show_container');
+}, 8000);
+</script>  
+</body>
+</html>
